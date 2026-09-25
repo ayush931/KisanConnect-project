@@ -1,0 +1,134 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary-green: #0b5d1e;
+  --secondary-green: #176b2c;
+  --fresh-green: #4caf3d;
+  --light-green: #8bc34a;
+  --gold: #f4b942;
+  --yellow: #ffc83d;
+  --earth-brown: #8b5a2b;
+  --cream: #fff8e7;
+  --text-dark: #1f2937;
+  --white: #ffffff;
+}
+
+body {
+  max-width: 80%;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+body::before {
+  content: '';
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+
+  background-image: url('/assets/images/bg.jpg');
+  background-position: fixed;
+  background-size: 100%;
+
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* ===========================================
+ * Header CSS
+ * ============================================
+ */
+
+header {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--fresh-green);
+  text-underline-offset: 5px;
+  text-decoration-thickness: 3px;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-search-box {
+  position: relative;
+}
+
+.header-search-box input {
+  padding: 8px 20px 8px 30px;
+  border-radius: 5px;
+  border: 2px solid var(--text-dark);
+}
+
+.primary-button {
+  background-color: var(--primary-green);
+  color: var(--cream);
+  padding: 8px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: var(--secondary-green);
+}
+
+.secondary-button {
+  background-color: var(--white);
+  color: var(--secondary-green);
+  border: 2px solid var(--secondary-green);
+  padding: 8px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: var(--text-dark);
+    color: var(--cream);
+    border: none;
+}
+
+.header-search-box img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
