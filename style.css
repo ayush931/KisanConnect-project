@@ -30,8 +30,8 @@ body::before {
   content: '';
   top: 0px;
   left: 0px;
-  height: 100vh;
-  width: 100vw;
+  height: 100vh;  /* vh -> view height */
+  width: 100vw; /* vw -> view width */
   position: fixed;
 
   background-image: url('/assets/images/bg.jpg');
@@ -44,7 +44,7 @@ body::before {
 
 /* ===========================================
  * Header CSS
- * ============================================
+ * ===========================================
  */
 
 header {
@@ -59,12 +59,12 @@ header {
 .nav-header {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 35px;
 }
 
 a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text-dark);
   cursor: pointer;
@@ -81,7 +81,7 @@ a:hover {
 .logo-header {
   display: flex;
   align-items: center;
-  gap: 120px;
+  gap: 50px;
 }
 
 .right-header {
@@ -98,6 +98,10 @@ a:hover {
   padding: 8px 20px 8px 30px;
   border-radius: 5px;
   border: 2px solid var(--text-dark);
+}
+
+.header-search-box input:focus {
+    outline: none;
 }
 
 .primary-button {
