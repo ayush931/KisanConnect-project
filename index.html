@@ -16,47 +16,70 @@
     <!-- Header portio -->
     <header>
       <!-- Logo part of the header -->
-      <div class="logo-header">
-        <img src="/assets/images/logo.png" alt="" height="120px" />
+      <div class="wrapper" id="header-wrapper">
+        <div class="logo-header">
+          <img src="/assets/images/logo.png" alt="" height="120px" />
 
-        <!-- Navigation inside the logo header -->
-        <nav class="nav-header">
-          <a href="">Home</a>
-          <a href="">Crops</a>
-          <a href="">Seasonal Guide</a>
-          <a href="">Resources</a>
-          <a href="">Weather</a>
-          <a href="">Contact</a>
-        </nav>
-      </div>
-
-      <!-- Right part of the header -->
-      <div class="right-header">
-        <div class="header-search-box">
-          <img src="/assets/images/search_icon.svg" alt="" height="18px" />
-          <input type="text" placeholder="search here..." />
+          <!-- Navigation inside the logo header -->
+          <nav class="nav-header">
+            <a href="">Home</a>
+            <a href="">Crops</a>
+            <a href="">Seasonal Guide</a>
+            <a href="">Resources</a>
+            <a href="">Weather</a>
+            <a href="">Contact</a>
+          </nav>
         </div>
 
-        <div class="primary-button" id="header-button">Search</div>
+        <!-- Right part of the header -->
+        <div class="right-header">
+          <div class="header-search-box">
+            <img src="/assets/images/search_icon.svg" alt="" height="18px" />
+            <input type="text" placeholder="search here..." />
+          </div>
+
+          <div class="primary-button" id="header-button">Search</div>
+        </div>
       </div>
     </header>
 
     <!-- Main section of Index page -->
 
     <main>
-      <section class="main-section">
-        <p>Empowering Farmers with Better Information</p>
-        <h2>Smart Farming Starts with the Right Information</h2>
-        <p>
-          KisanConnect brings essential farming information together in one
-          simple and easy-to-use platform. Explore crop information, seasonal
-          guides, government schemes, weather updates, and useful agricultural
-          resources.
-        </p>
+      <div class="wrapper" id="main-wrapper">
+        <section class="left-section">
+          <p class="top-title">Empowering Farmers with Better Information</p>
+          <h2>Smart Farming Starts with the Right Information</h2>
+          <p>
+            KisanConnect brings essential farming information together in one
+            simple and easy-to-use platform. Explore crop information, seasonal
+            guides, government schemes, weather updates, and useful agricultural
+            resources.
+          </p>
 
-        <span class="primary-button">Explore Crops</span>
-        <span class="secondary-button">Explore Schemes</span>
-      </section>
+          <div class="main-buttons">
+            <div class="primary-button">Explore Crops</div>
+            <div class="secondary-button">Explore Schemes</div>
+          </div>
+        </section>
+
+        <section class="right-section">
+          <img
+            src="/assets/images/kisan_image1.jpeg"
+            alt=""
+            height="300px"
+            width="500px"
+          />
+
+          <img
+            src="/assets/images/kisan_image2.jpeg"
+            alt=""
+            height="250px"
+            width="400px"
+            class="second-right-main-image"
+          />
+        </section>
+      </div>
     </main>
   </body>
 </html>

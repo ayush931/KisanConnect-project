@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 :root {
@@ -17,8 +18,6 @@
 }
 
 body {
-  max-width: 80%;
-  margin: auto;
   font-family: 'Roboto', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -26,20 +25,10 @@ body {
   font-variation-settings: 'wdth' 100;
 }
 
-body::before {
-  content: '';
-  top: 0px;
-  left: 0px;
-  height: 100vh;  /* vh -> view height */
-  width: 100vw; /* vw -> view width */
-  position: fixed;
-
-  background-image: url('/assets/images/bg.jpg');
-  background-position: fixed;
-  background-size: 100%;
-
-  opacity: 0.5;
-  z-index: -1;
+.wrapper {
+    width: 80vw;
+    margin: auto;
+    max-width: 1440px;
 }
 
 /* ===========================================
@@ -47,8 +36,11 @@ body::before {
  * ===========================================
  */
 
-header {
-  margin-top: 10px;
+/* header {
+  background-color: var(--cream);
+} */
+
+#header-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -101,7 +93,7 @@ a:hover {
 }
 
 .header-search-box input:focus {
-    outline: none;
+  outline: none;
 }
 
 .primary-button {
@@ -126,13 +118,58 @@ a:hover {
 }
 
 .secondary-button:hover {
-    background-color: var(--text-dark);
-    color: var(--cream);
-    border: none;
+  background-color: var(--text-dark);
+  color: var(--cream);
+  border: none;
 }
 
 .header-search-box img {
   position: absolute;
   top: 8px;
   left: 8px;
+}
+
+#main-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 10fr);
+    align-items: center;
+    margin-top: 40px;
+    right: 100px;
+    gap: 50px;
+}
+
+.right-section {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+}
+
+.right-section img {
+    border-radius: 10px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.left-section .top-title {
+    background-color: var(--yellow);
+    display: inline-block;
+    width: 20vw;
+    padding: 5px 20px;
+    font-size: small;
+    border-radius: 50px;
+}
+
+.main-buttons {
+    display: flex;
+}
+
+.second-right-main-image {
+    position: absolute;
+    top: 90%;
+    left: 30%;
 }
